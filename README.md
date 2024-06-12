@@ -1,0 +1,1 @@
+Django project with simple RPC Client
