@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Auth form</title>
+</head>
+<body>
+<h1>RPC Form</h1>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Call</button>
+</form>
+
+{% if response_data %}
+<h2>Response</h2>
+{{ response_data|safe }}
+{% endif %}
+
+
+</body>
+</html>
